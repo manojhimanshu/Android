@@ -1,0 +1,57 @@
+  AndroidMainClass.java lowe part ... for menu option ..from sketaton.java
+  
+    /**
+     * Called when the activity is about to start interacting with the user.
+     */
+  //  @Override
+ //   protected void onResume() {
+  //      super.onResume();
+   // }
+
+    /**
+     * Called when your activity's options menu needs to be created.
+     */
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        super.onCreateOptionsMenu(menu);
+
+        // We are going to create two menus. Note that we assign them
+        // unique integer IDs, labels from our string resources, and
+        // given them shortcuts.
+        menu.add(0, BACK_ID, 0, R.string.back).setShortcut('0', 'b');
+        menu.add(0, CLEAR_ID, 0, R.string.clear).setShortcut('1', 'c');
+
+        return true;
+    }
+
+    /**
+     * Called right before your activity's option menu is displayed.
+     */
+    @Override
+    public boolean onPrepareOptionsMenu(Menu menu) {
+        super.onPrepareOptionsMenu(menu);
+
+        // Before showing the menu, we need to decide whether the clear
+        // item is enabled depending on whether there is text to clear.
+     //   menu.findItem(CLEAR_ID).setVisible(mEditor.getText().length() > 0);
+
+        return true;
+    }
+
+    /**
+     * Called when a menu item is selected.
+     */
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+        case BACK_ID:
+        	setContentView(R.layout.tryit);
+            
+            return true;
+        case CLEAR_ID:
+        	finish();
+            return true;
+        }
+
+        return super.onOptionsItemSelected(item);
+    }

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello">Hello World, helloworld_Activity!</string>
+    <string name="app_name">OpenGL Android</string>
+    <string name="cont">Continue</string>
+    <string name="level1">Level 1</string>
+    <string name="level2">Level 2</string>
+    <string name="level3">Level 3</string>
+    <string name="level4">Level 4</string>
+    <string name="level5">Level 5</string>
+    
+<string name="back">GO Back</string>
+<string name="clear">Clear IT</string>
+</resources>
